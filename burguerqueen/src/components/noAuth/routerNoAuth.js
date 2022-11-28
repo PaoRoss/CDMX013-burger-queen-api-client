@@ -1,11 +1,15 @@
-import LoginRapido from "./LoginRapido";
+//import LoginRapido from './LoginRapido';
 import {
     createBrowserRouter,
-  } from "react-router-dom";
+  } from 'react-router-dom';
+import Login from '../noAuth/LogIn';
 
-export const routerNoAuth = createBrowserRouter([
+export const routerNoAuth = ({changeUser}) => {
+  return createBrowserRouter([
     {
-      path: "/",
-      element: <LoginRapido />
+      path: '/',
+   //   element: <LoginRapido />
+     element: <Login changeUser={changeUser} />
     },
   ]);
+};
